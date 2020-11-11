@@ -1,0 +1,27 @@
+{
+  "branches": ["master"],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": [
+          { "path":  "../../homectl.darwin_amd64", "label":  "Home Controller for MacOS X (x64)"},
+          { "path":  "../../homectl.linux_amd64", "label":  "Home Controller for Linux (x64)"},
+          { "path":  "../../homectl.windows_amd64.exe", "label":  "Home Controller for Windows (x64)"}
+        ]
+      }
+    ]
+  ]
+}
